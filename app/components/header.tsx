@@ -11,10 +11,16 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="w-full z-50">
-      {/* Desktop header */}
-      <div className="hidden md:flex h-20 w-full">
-        <div className="flex basis-[55%] bg-[#f2f2f2] py-5 items-center justify-between px-20">
+    <header className="w-full z-50 relative">
+      {/* Full-width background split */}
+      <div className="absolute inset-0 hidden md:flex">
+        <div className="w-[55%] bg-[#f2f2f2]" />
+        <div className="w-[45%] bg-[#00cc99]" />
+      </div>
+
+      {/* Header Content */}
+      <div className="relative z-10 container mx-auto hidden md:flex h-20 w-full">
+        <div className="flex basis-[55%] py-5 items-center justify-between px-20">
           <Link href="/" passHref>
             <div className="cursor-pointer">
               <Image
@@ -62,7 +68,7 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="flex basis-[45%] bg-[#00cc99] py-5 items-center justify-center space-x-4 text-white font-medium">
+        <div className="flex basis-[45%] py-5 items-center justify-center space-x-4 text-white font-medium">
           <Link href="/signin" className="font-bold text-white">
             Sign In
           </Link>
@@ -83,6 +89,8 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Header stays the same */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-[#f2f2f2] flex items-center justify-center shadow z-50 px-4 relative">
         <Link href="/" passHref>
           <div className="cursor-pointer z-20">
@@ -107,7 +115,6 @@ export default function Header() {
                   isOpen ? "opacity-0" : "w-3"
                 }`}
               />
-
               <span
                 className={`block h-[2px] bg-white transition-transform duration-300 ease-in-out ${
                   isOpen ? "-rotate-45 -translate-y-[6px]" : "w-5"
