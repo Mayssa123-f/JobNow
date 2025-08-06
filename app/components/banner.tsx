@@ -4,13 +4,13 @@ import Image from "next/image";
 export default function Banner() {
   return (
     <section className="w-full min-h-[450px] relative bg-[#f2f2f2] overflow-hidden">
-      {/* Right side full background outside container */}
-      <div className="hidden md:block absolute top-0 right-0 h-full w-[45%] bg-[#00cc99] rounded-bl-[80px] z-0" />
+      {/* Right side full background outside container (Desktop only) */}
+      <div className="hidden md:block absolute top-0 right-0 h-full w-[48%] bg-[#00cc99] rounded-bl-[80px] z-0" />
 
       <div className="relative z-10 container mx-auto">
         <div className="flex flex-col md:flex-row w-full min-h-[450px]">
-          {/* Left side: Text */}
-          <div className="w-full md:w-[55%] flex items-start justify-center">
+          {/* Left side: Text with mobile-only bg-[#fbfbfb] */}
+          <div className="w-full md:w-[65%] flex items-start justify-center bg-[#fbfbfb] md:bg-transparent">
             <div className="w-full px-6 md:px-20 pt-24 pb-10 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold mb-8 text-black">
                 Search, Find, &amp; Apply
@@ -58,9 +58,9 @@ export default function Banner() {
             </div>
           </div>
 
-          {/* Right side: Icons on green */}
-          <div className="relative w-full md:w-[45%] min-h-[450px] overflow-hidden">
-            <div className="absolute top-[10%] left-[15%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
+          {/* Right side: Green background with mobile-only bg */}
+          <div className="relative w-full md:w-[48%] min-h-[450px] overflow-hidden bg-[#00cc99] md:bg-transparent">
+            <div className="absolute top-[10%] left-[40px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
               <Image
                 src="/images/top.png"
                 width={30}
@@ -69,7 +69,7 @@ export default function Banner() {
               />
             </div>
 
-            <div className="absolute bottom-[10%] left-[10%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
+            <div className="absolute bottom-[10%] left-[40px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
               <Image
                 src="/images/center.png"
                 width={30}
@@ -78,7 +78,7 @@ export default function Banner() {
               />
             </div>
 
-            <div className="absolute bottom-[45%] right-[10%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[10deg]">
+            <div className="absolute bottom-[45%] right-[40px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[10deg]">
               <Image
                 src="/images/bottom.png"
                 width={30}
