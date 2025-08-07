@@ -20,8 +20,8 @@ export default function Banner() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
 
-              <div className="flex flex-row flex-wrap gap-2 items-center bg-white rounded-xl p-2 shadow w-full max-w-none mb-10">
-                <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-md flex-1 min-w-0">
+              <div className="flex flex-row flex-wrap gap-2 items-center bg-white rounded-xl p-2 shadow mb-10 md:w-[680px] mx-auto md:ml-1">
+                <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-md flex-1">
                   <Image
                     src="/images/search.png"
                     width={20}
@@ -57,8 +57,6 @@ export default function Banner() {
               </div>
             </div>
           </div>
-
-          {/* Right side: Green background with mobile-only bg */}
           <div className="relative w-full md:w-[48%] min-h-[450px] overflow-hidden bg-[#00cc99] md:bg-transparent">
             <div className="absolute top-[10%] left-[40px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
               <Image

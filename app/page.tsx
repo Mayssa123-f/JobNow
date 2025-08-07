@@ -4,6 +4,7 @@ import Footer from "./components/footer";
 import HowItWorks from "./components/howItWorks";
 import Categories from "./components/categories";
 import RecentlyAddedJobs from "./components/addedJobs";
+import Feedback from "./components/feedback";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -14,6 +15,7 @@ export default function HomePage() {
         <HowItWorks />
         <Categories />
         <RecentlyAddedJobs />
+        <Feedback />
       </main>
 
       <Footer />

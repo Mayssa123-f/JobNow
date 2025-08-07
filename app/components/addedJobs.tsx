@@ -13,51 +13,39 @@ import {
 
 const addedJobs = [
   {
-    icon: <FaLaptopCode />,
-    title: "Frontend Developer",
-    company: "TechSpark Ltd.",
-    description: "Build and maintain user-friendly web interfaces.",
-    location: "Remote",
+    image: "/images/uiux.png",
+    title: "UI/UX Designer",
+    company: "Dimension Studio",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "San Francisco, CA",
     type: "Full Time",
   },
   {
-    icon: <FaChartBar />,
-    title: "Data Analyst",
-    company: "Insight Corp",
-    description: "Analyze datasets to uncover insights.",
-    location: "New York",
-    type: "Part Time",
-  },
-  {
-    icon: <FaUniversity />,
-    title: "Education Consultant",
-    company: "FutureEd",
-    description: "Advise students on academic paths.",
-    location: "London",
+    image: "/images/full.png ",
+    title: "Full Stack Developer",
+    company: "Alpander",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "San Francisco, CA",
     type: "Full Time",
   },
   {
-    icon: <FaCog />,
+    image: "/images/project.png",
+    title: "Product Designer",
+    company: "XReact Tech",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "San Francisco, CA",
+    type: "Full Time",
+  },
+  {
+    image: "/images/cyber.png ",
     title: "DevOps Engineer",
-    company: "CloudSync",
-    description: "Maintain and deploy cloud infrastructure.",
-    location: "Berlin",
-    type: "Full Time",
-  },
-  {
-    icon: <FaFlask />,
-    title: "Lab Researcher",
-    company: "BioGen Labs",
-    description: "Conduct experimental trials and research.",
-    location: "Amsterdam",
-    type: "Part Time",
-  },
-  {
-    icon: <FaProjectDiagram />,
-    title: "Project Manager",
-    company: "BuildPro",
-    description: "Oversee software development projects.",
-    location: "Toronto",
+    company: "CreoShift",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "Zahle,Lebanon ",
     type: "Full Time",
   },
 ];
@@ -75,35 +63,61 @@ export default function RecentlyAddedJobs() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
-        <Swiper
-          spaceBetween={16}
-          slidesPerView={1.5}
-          breakpoints={{
-            768: { slidesPerView: 2.5 },
-          }}
-        >
-          {addedJobs.map((job, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-[#f9f9f9] rounded-2xl p-6 shadow-md text-left flex flex-col justify-between h-full min-h-[280px] hover:shadow-lg transition duration-300">
-                <div className="text-4xl text-[#00D5AE] mb-4">{job.icon}</div>
-                <h3 className="text-xl font-bold mb-1">{job.title}</h3>
-                <p className="text-sm text-[#666] mb-2">{job.company}</p>
-                <p className="text-sm text-gray-500 mb-4">{job.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-[#e0f7f3] text-[#00D5AE] px-3 py-1 rounded-full text-xs font-medium">
-                    {job.location}
-                  </span>
-                  <span className="bg-[#e0f7f3] text-[#00D5AE] px-3 py-1 rounded-full text-xs font-medium">
-                    {job.type}
-                  </span>
+        <div className="px-[15px]">
+          <Swiper
+            spaceBetween={20}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2.8,
+                spaceBetween: 24,
+              },
+            }}
+          >
+            {addedJobs.map((job, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col justify-between bg-white rounded-xl text-left w-[85vw] max-w-[450px] h-[400px] md:h-[450px] p-4">
+                  <img
+                    src={job.image}
+                    alt={job.title}
+                    className="w-12 h-12 mb-1 object-contain"
+                  />
+                  <h3 className="text-lg md:text-xl font-bold mb-1">
+                    {job.title}
+                  </h3>
+                  <p className="text-sm text-[#8a8a8a] mb-1">{job.company}</p>
+                  <p className="text-sm text-[#929292] mb-1">
+                    {job.description}
+                  </p>
+                  <div className="flex gap-3 mb-2">
+                    <span className="flex items-center gap-2 bg-[#f9f9f9] px-2.5 py-1 rounded text-sm text-black">
+                      <img
+                        src="/images/loc.png"
+                        alt="Location"
+                        className="w-4 h-4"
+                      />
+                      {job.location}
+                    </span>
+                    <span className="flex items-center gap-2 bg-[#f9f9f9] px-2.5 py-1 rounded text-sm text-black">
+                      <img
+                        src="/images/time.png"
+                        alt="Job Type"
+                        className="w-4 h-4"
+                      />
+                      {job.type}
+                    </span>
+                  </div>
+                  <button className="text-[#00cc99] text-left text-sm font-bold mt-1">
+                    Apply Now &gt;
+                  </button>
                 </div>
-                <button className="text-[#00cc99] hover:underline text-sm font-medium mt-auto">
-                  Apply Now &gt;
-                </button>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <button className="mt-10 border border-[#00cc99] bg-white text-[#00D5AE] hover:bg-[#00cc99] hover:text-white transition px-6 py-2 rounded-md text-sm font-medium cursor-pointer">
           View More

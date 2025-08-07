@@ -6,8 +6,21 @@ import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-[#00cc99] ">
-      <div className="container mx-auto px-12 py-30 md:px-8 pb-16">
-        <div className="flex justify-center -translate-y-1/2"></div>
+      <div className="container mx-auto px-12 md:px-8 pb-16">
+        <div className="flex justify-center -translate-y-1/2">
+          <div className="bg-[#003a2c] text-white rounded-2xl w-full md:w-3/4 p-6 md:p-10 text-center shadow-lg">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3">
+              Register your CV now!
+            </h2>
+            <p className="text-gray-300 mb-4 text-sm md:text-base leading-normal max-w-xl mx-auto">
+              Send us your CV right now so that we can see where you should be
+              placed and what job fits you best. Don’t forget your cover letter!
+            </p>
+            <button className="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#00382A] transition cursor-pointer">
+              Register Now
+            </button>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-y-6 md:gap-y-0 md:gap-x-55 text-white">
           <div>
