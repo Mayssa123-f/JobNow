@@ -22,7 +22,7 @@ const categories = [
 export default function Categories() {
   return (
     <section id="about" className="py-20 bg-[#eef9f6]">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="md:max-w-[1500px] max-w-7xl mx-auto px-4 md:px-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Popular Job Categories
         </h2>
@@ -33,7 +33,7 @@ export default function Categories() {
         </p>
 
         <Swiper
-          spaceBetween={16}
+          spaceBetween={12}
           slidesPerView={2.1}
           breakpoints={{
             640: { slidesPerView: 3 },

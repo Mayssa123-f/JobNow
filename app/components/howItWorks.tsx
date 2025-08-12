@@ -32,8 +32,8 @@ const howItWorksItems = [
 
 export default function HowItWorks() {
   return (
-    <section className="w-full bg-[#fbfbfb] py-16 pt-30">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="w-full bg-[#fbfbfb] py-16 pt-20 md:pt-30">
+      <div className="md:max-w-[1500px] max-w-7xl mx-auto px-4 md:px-16 ">
         <h2 className="text-2xl sm:text-4xl font-bold text-left mb-12">
           How it works
         </h2>
@@ -79,7 +79,7 @@ export default function HowItWorks() {
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 pt-30">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:pt-30">
           <div className="md:w-[40%] w-full">
             <Image
               src="/images/hiwIm.png"
@@ -89,7 +89,7 @@ export default function HowItWorks() {
               className="object-contain"
             />
           </div>
-          <div className="md:col-span-3 md:w-[60%] flex flex-col gap-4 text-center md:text-left items-center md:items-start w-full pb-50">
+          <div className="md:col-span-3 md:w-[60%] flex flex-col gap-4 text-center md:text-left items-center md:items-start w-full md:pb-50">
             <h2 className=" md:text-4xl font-bold text-black">
               We will help you to become an employee in your dream company
             </h2>

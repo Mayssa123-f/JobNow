@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <section className="w-full min-h-[450px] relative bg-[#f2f2f2] overflow-hidden pb-20">
+    <section className="w-full min-h-[450px] relative bg-[#f2f2f2] overflow-hidden md:pb-20">
       <div className="hidden md:block absolute top-0 right-0 h-full w-[48%] bg-[#00cc99] rounded-bl-[50px] z-0" />
 
       <div className="relative z-10 container mx-auto">
@@ -75,7 +75,7 @@ export default function Banner() {
               />
             </div>
 
-            <div className="absolute bottom-[45%] right-[200px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[10deg]">
+            <div className="absolute bottom-[45%] right-[80px] md:right-[200px] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[10deg]">
               <Image
                 src="/images/bottom.png"
                 width={30}
