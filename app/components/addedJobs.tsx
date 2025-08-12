@@ -2,14 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import {
-  FaLaptopCode,
-  FaChartBar,
-  FaUniversity,
-  FaCog,
-  FaFlask,
-  FaProjectDiagram,
-} from "react-icons/fa";
+import { FaAngleRight, FaMapMarkerAlt, FaBriefcase } from "react-icons/fa";
 
 const addedJobs = [
   {
@@ -53,7 +46,7 @@ const addedJobs = [
 export default function RecentlyAddedJobs() {
   return (
     <section className="py-20 bg-[#fbfbfb]">
-      <div className="container mx-auto px-4 text-center">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Recently Added Jobs
         </h2>
@@ -65,54 +58,51 @@ export default function RecentlyAddedJobs() {
 
         <div className="px-[15px]">
           <Swiper
-            spaceBetween={20}
+            spaceBetween={30}
+            slidesPerView={1.2}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-              },
-              768: {
-                slidesPerView: 2.8,
-                spaceBetween: 24,
-              },
+              480: { slidesPerView: 2 },
+              640: { slidesPerView: 1.5 },
+              1024: { slidesPerView: 2.5 },
             }}
           >
             {addedJobs.map((job, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col justify-between bg-white rounded-xl text-left w-[85vw] max-w-[450px] h-[400px] md:h-[450px] p-4">
+                <div className="flex flex-col justify-between bg-white rounded-xl text-left w-full md:w-[450px] p-3 py-6">
                   <img
                     src={job.image}
-                    alt={job.title}
-                    className="w-12 h-12 mb-1 object-contain"
+                    alt={`${job.company} logo`}
+                    className="w-20 h-20 rounded-full mb-6 object-contain"
                   />
-                  <h3 className="text-lg md:text-xl font-bold mb-1">
-                    {job.title}
-                  </h3>
-                  <p className="text-sm text-[#8a8a8a] mb-1">{job.company}</p>
-                  <p className="text-sm text-[#929292] mb-1">
-                    {job.description}
-                  </p>
-                  <div className="flex gap-3 mb-2">
-                    <span className="flex items-center gap-2 bg-[#f9f9f9] px-2.5 py-1 rounded text-sm text-black">
-                      <img
-                        src="/images/loc.png"
-                        alt="Location"
-                        className="w-4 h-4"
-                      />
-                      {job.location}
-                    </span>
-                    <span className="flex items-center gap-2 bg-[#f9f9f9] px-2.5 py-1 rounded text-sm text-black">
-                      <img
-                        src="/images/time.png"
-                        alt="Job Type"
-                        className="w-4 h-4"
-                      />
-                      {job.type}
-                    </span>
+                  <div className="flex flex-col flex-grow justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-black mb-3">
+                        {job.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 mb-9">
+                        {job.company}
+                      </p>
+                      <p className="text-sm text-gray-600 mb-8">
+                        {job.description}
+                      </p>
+                    </div>
+                    <div>
+                      <div className="flex gap-3 mb-6">
+                        <span className="flex items-center gap-2 bg-gray-200 px-2.5 py-1 md:px-5 md:py-2.5 rounded text-sm text-black">
+                          <FaMapMarkerAlt className="text-sm" /> {job.location}
+                        </span>
+                        <span className="flex items-center gap-2 bg-gray-200 px-2.5 py-1 md:px-5 md:py-2.5 rounded text-sm text-black">
+                          <FaBriefcase className="text-sm" /> {job.type}
+                        </span>
+                      </div>
+                      <a
+                        href="/apply"
+                        className="text-[#00cc99] text-left text-lg font-bold mt-1 cursor-pointer hover:text-[#00bfa0] transition flex items-center gap-1"
+                      >
+                        Apply Now <FaAngleRight />
+                      </a>
+                    </div>
                   </div>
-                  <button className="text-[#00cc99] text-left text-sm font-bold mt-1">
-                    Apply Now &gt;
-                  </button>
                 </div>
               </SwiperSlide>
             ))}

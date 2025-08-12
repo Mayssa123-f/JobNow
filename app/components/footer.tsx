@@ -1,14 +1,20 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaAngleRight,
+  FaGoogle,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-[#00cc99] ">
       <div className="container mx-auto px-12 md:px-8 pb-16">
         <div className="flex justify-center -translate-y-1/2">
-          <div className="bg-[#003a2c] text-white rounded-2xl w-full md:w-3/4 p-6 md:p-10 text-center shadow-lg">
+          <div className="bg-[#003a2c] text-white rounded-2xl w-full md:w-[1380px] p-6 md:p-10 text-center shadow-lg">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3">
               Register your CV now!
             </h2>
@@ -45,15 +51,27 @@ export default function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-15 sm:gap-x-15 md:gap-y-0 md:gap-x-20">
             <div className="md:text-center text-left">
               <h3 className="text-base text-lg font-bold mb-3">Company</h3>
-              <div className="inline-block text-left relative left-0  md:left-14.5">
+              <div className="inline-block text-left relative left-0 md:left-14.5">
                 <p className="text-sm text-gray-100 leading-snug">
                   Address: 123 Fifth Avenue, New York - 10018, USA
                 </p>
                 <p className="text-sm text-gray-100 leading-snug mt-1">
-                  Call us: (+100) 456 7890
+                  Call us:{" "}
+                  <a
+                    href="tel:+1004567890"
+                    className="underline hover:text-gray-300"
+                  >
+                    (+100) 456 7890
+                  </a>
                 </p>
                 <p className="text-sm text-gray-100 leading-snug mt-1">
-                  Email: yourjob@example.com
+                  Email:{" "}
+                  <a
+                    href="mailto:yourjob@example.com"
+                    className="underline hover:text-gray-300"
+                  >
+                    yourjob@example.com
+                  </a>
                 </p>
                 <p className="text-sm text-gray-100 leading-snug mt-1">
                   Mon-Sat: 9:00 AM - 18:00 PM
@@ -74,7 +92,7 @@ export default function Footer() {
                 ].map((page, index) => (
                   <li key={index}>
                     <span className="w-7 inline-block text-right text-sm">
-                      &gt;
+                      <FaAngleRight />
                     </span>
                     <a
                       href={page.href}

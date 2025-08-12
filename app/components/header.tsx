@@ -68,14 +68,14 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="flex basis-[48%] py-5 items-center justify-center space-x-4 text-white font-medium">
+        <div className="flex basis-[48%] py-5 items-center justify-end gap-8 pr-[42px] space-x-4 text-white font-medium">
           <Link href="/signin" className="font-bold text-white">
             Sign In
           </Link>
           <div className="flex items-center gap-4">
             <Link
               href="/signup"
-              className="flex items-center bg-white text-black font-bold px-4 py-1 rounded hover:bg-gray-100"
+              className="flex items-center bg-white text-black font-bold px-5 py-2.5 rounded-[10px] hover:bg-gray-100"
             >
               <Image
                 src="/images/create.png"
@@ -90,7 +90,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Header stays the same */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-[#f2f2f2] flex items-center justify-center shadow z-50 px-4 relative">
         <Link href="/" passHref>
           <div className="cursor-pointer z-20">
