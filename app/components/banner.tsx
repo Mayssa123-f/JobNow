@@ -3,10 +3,10 @@ import { BsShieldShaded } from "react-icons/bs";
 
 export default function Banner() {
   return (
-    <section id="home" className="relative w-full overflow-hidden">
+    <section id="home" className="relative w-full overflow-hidden bg-[#f2f2f2]">
       <div className="hidden md:flex w-full min-h-[450px]">
         <div className="w-[52%] md:bg-[#f2f2f2] bg-[#fbfbfb]" />
-        <div className="w-[48%] bg-[#00cc99] rounded-bl-[100px]" />
+        <div className="w-[48%] absolute top-0 right-0 h-full bg-[#00cc99] rounded-bl-[100px] z-0" />
       </div>
 
       <div className="block md:hidden absolute inset-0 bg-[#00cc99] z-0" />
@@ -19,9 +19,10 @@ export default function Banner() {
                 Search, Find, &amp; Apply
               </h1>
               <p className="text-gray-600 mb-6 max-w-md mx-auto md:mx-0">
-                Find whatever job you need: Engineer, Doctor, Lawyer, Taxi
-                Driver—you choose! And of course, we should know where you live
-                because we don't want you to work far from home after all.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </p>
 
               <div className="flex flex-row flex-wrap gap-2 items-center bg-white rounded-xl p-2 shadow w-full max-w-[500px] md:mx-0 mx-auto">
