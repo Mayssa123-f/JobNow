@@ -50,11 +50,11 @@ export default function HowItWorks() {
             </button>
           </div>
         </div>
-        <div className="grid gap-6 sm:gap-8 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mb-12 cursor-pointer px-4 sm:px-10">
+        <div className="grid gap-6 sm:gap-8 grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mb-12 cursor-pointer px-4 sm:px-10 md:px-0">
           {howItWorksItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white w-[110%] sm:w-full h-[290px] sm:h-[260px] p-4 sm:p-6 rounded-xl shadow-md text-left transform transition duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#00D5AE] hover:ring-offset-2 mx-auto"
+              className="bg-white w-[100%] sm:w-full h-[290px] sm:h-[240px] p-4 sm:p-6 rounded-xl shadow-md text-left transform transition duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#00D5AE] hover:ring-offset-2 mx-auto"
             >
               <div className="w-14 h-14 mb-3">
                 <Image

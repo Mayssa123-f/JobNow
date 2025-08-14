@@ -1,16 +1,20 @@
-"use client";
-import Image from "next/image";
 import { FaSearchLocation, FaSearch, FaChartBar } from "react-icons/fa";
 import { BsShieldShaded } from "react-icons/bs";
 
 export default function Banner() {
   return (
-    <section className="w-full min-h-[450px] relative bg-[#f2f2f2] overflow-hidden md:pb-20">
-      <div className="hidden md:block absolute top-0 right-0 h-full w-[48%] bg-[#00cc99] rounded-bl-[50px] z-0" />{" "}
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="flex flex-col md:flex-row w-full min-h-[450px]">
-          <div className="w-full md:w-[65%] flex items-start justify-center bg-[#fbfbfb] md:bg-transparent">
-            <div className="w-full px-4 pt-12 md:pt-24 pb-10 text-center md:text-left">
+    <section id="home" className="relative w-full overflow-hidden">
+      <div className="hidden md:flex w-full min-h-[450px]">
+        <div className="w-[52%] md:bg-[#f2f2f2] bg-[#fbfbfb]" />
+        <div className="w-[48%] bg-[#00cc99] rounded-bl-[100px]" />
+      </div>
+
+      <div className="block md:hidden absolute inset-0 bg-[#00cc99] z-0" />
+
+      <div className="relative container mx-auto md:px-6 z-10 md:-mt-[450px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 min-h-[450px]">
+          <div className="md:bg-[#f2f2f2] bg-[#fbfbfb] flex items-start justify-center">
+            <div className="w-full pt-12 md:pt-24 pb-10 text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-bold mb-8">
                 Search, Find, &amp; Apply
               </h1>
@@ -43,18 +47,19 @@ export default function Banner() {
 
                 <button
                   type="button"
-                  className="bg-[#00D5AE] hover:bg-[#00bfa0] text-white px-6 py-2 rounded-md text-sm transition cursor-pointer flex-none"
+                  className="bg-[#00cc99] hover:bg-[#00bfa0] text-white px-6 py-2 rounded-md text-sm transition cursor-pointer flex-none"
                 >
                   Search
                 </button>
               </div>
             </div>
           </div>
-          <div className="relative w-full min-h-[450px] overflow-hidden">
-            <div className="absolute top-[10%] left-[30%] md:left-[30%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
+
+          <div className="relative w-full min-h-[450px] overflow-hidden ">
+            <div className="absolute top-[10%] left-[15%] md:left-[15%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
               <FaSearch className="text-[#00D5AE] text-2xl" />
             </div>
-            <div className="absolute bottom-[10%] left-[25%] md:left-[25%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
+            <div className="absolute bottom-[10%] left-[10%] md:left-[10%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[-10deg]">
               <BsShieldShaded className="text-[#00D5AE] text-2xl" />
             </div>
             <div className="absolute bottom-[45%] right-[10%] w-14 h-14 bg-white rounded-lg flex items-center justify-center shadow rotate-[10deg]">
