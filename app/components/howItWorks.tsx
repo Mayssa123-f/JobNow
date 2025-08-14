@@ -33,7 +33,7 @@ const howItWorksItems = [
 export default function HowItWorks() {
   return (
     <section className="w-full bg-[#fbfbfb] py-16 pt-20 md:pt-30">
-      <div className="md:max-w-[1500px] max-w-7xl mx-auto px-4 md:px-16 ">
+      <div className="container mx-auto px-8">
         <h2 className="text-2xl sm:text-4xl font-bold text-left mb-12">
           How it works
         </h2>

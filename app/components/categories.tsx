@@ -22,7 +22,7 @@ const categories = [
 export default function Categories() {
   return (
     <section id="about" className="py-20 bg-[#eef9f6]">
-      <div className="md:max-w-[1500px] max-w-7xl mx-auto px-4 md:px-16 text-center">
+      <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Popular Job Categories
         </h2>
@@ -31,7 +31,6 @@ export default function Categories() {
           opportunites "not food of course we aren't a restaurant after all" so
           these are the most popular job categories.
         </p>
-
         <Swiper
           spaceBetween={12}
           slidesPerView={2.1}
@@ -64,7 +63,6 @@ export default function Categories() {
             </SwiperSlide>
           ))}
         </Swiper>
-
         <button className="mt-10 border border-[#00cc99] bg-[#eef9f6] text-[#00D5AE] hover:bg-[#00cc99] hover:text-white transition px-6 py-2 rounded-md text-sm font-medium cursor-pointer">
           View More
         </button>

@@ -12,9 +12,9 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-[#00cc99] ">
-      <div className="max-w-[1500px] mx-auto px-12 md:px-16 pb-16">
+      <div className="container mx-auto px-12 md:px-8 pb-16">
         <div className="flex justify-center -translate-y-10">
-          <div className="bg-[#003a2c] text-white rounded-2xl w-full md:w-[1400px] p-6 px-12 md:p-10 text-center shadow-lg">
+          <div className="bg-[#003a2c] text-white rounded-2xl w-full md:w-[1450px] p-6 px-12 md:p-10 text-center shadow-lg">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3">
               Register your CV now!
             </h2>
