@@ -54,7 +54,7 @@ export default function HowItWorks() {
           {howItWorksItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white w-full h-[280px] sm:h-[220px] p-4 sm:p-6 rounded-xl shadow-md text-left transform transition duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#00D5AE] hover:ring-offset-2"
+              className="bg-white w-[110%] sm:w-full h-[290px] sm:h-[220px] p-4 sm:p-6 rounded-xl shadow-md text-left transform transition duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-2xl hover:ring-2 hover:ring-[#00D5AE] hover:ring-offset-2 mx-auto"
             >
               <div className="w-14 h-14 mb-3">
                 <Image
