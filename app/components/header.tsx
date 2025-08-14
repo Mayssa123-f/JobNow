@@ -12,67 +12,65 @@ export default function Header() {
 
   return (
     <header className="w-full z-50 relative">
-      {/* Full-width background split */}
       <div className="absolute inset-0 hidden md:flex">
         <div className="w-[52%] bg-[#f2f2f2]" />
         <div className="w-[48%] bg-[#00cc99]" />
       </div>
 
-      {/* Header Content */}
-      <div className="relative z-10 container mx-auto hidden md:flex h-20 w-full">
-        <div className="flex basis-[52%] py-5 items-center justify-between px-20">
-          <Link href="/" passHref>
-            <div className="cursor-pointer">
-              <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={120}
-                height={150}
-              />
-            </div>
-          </Link>
+      <div className="relative z-10 hidden md:flex h-20 w-full">
+        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+          <div className="flex items-center space-x-16">
+            <Link href="/" passHref>
+              <div className="cursor-pointer -ml-3">
+                <Image
+                  src="/images/logo.png"
+                  alt="Logo"
+                  width={120}
+                  height={150}
+                />
+              </div>
+            </Link>
 
-          <nav className="flex space-x-11 text-black font-bold">
-            <Link
-              href="/"
-              className={`cursor-pointer hover:text-[#00cc99] ${
-                isActive("/") ? "text-[#00cc99] font-bold" : ""
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/jobs"
-              className={`cursor-pointer hover:text-[#00cc99] ${
-                isActive("/job") ? "text-[#00cc99] font-bold" : ""
-              }`}
-            >
-              Job
-            </Link>
-            <Link
-              href="/about-us"
-              className={`cursor-pointer hover:text-[#00cc99] ${
-                isActive("/about") ? "text-[#00cc99] font-bold" : ""
-              }`}
-            >
-              About Us
-            </Link>
-            <Link
-              href="/contact"
-              className={`cursor-pointer hover:text-[#00cc99] ${
-                isActive("/contact") ? "text-[#00cc99] font-bold" : ""
-              }`}
-            >
-              Contact
-            </Link>
-          </nav>
-        </div>
+            <nav className="flex space-x-11 text-black font-bold">
+              <Link
+                href="/"
+                className={`cursor-pointer hover:text-[#00cc99] ${
+                  isActive("/") ? "text-[#00cc99] font-bold" : ""
+                }`}
+              >
+                Home
+              </Link>
+              <Link
+                href="/jobs"
+                className={`cursor-pointer hover:text-[#00cc99] ${
+                  isActive("/job") ? "text-[#00cc99] font-bold" : ""
+                }`}
+              >
+                Job
+              </Link>
+              <Link
+                href="/about-us"
+                className={`cursor-pointer hover:text-[#00cc99] ${
+                  isActive("/about") ? "text-[#00cc99] font-bold" : ""
+                }`}
+              >
+                About Us
+              </Link>
+              <Link
+                href="/contact"
+                className={`cursor-pointer hover:text-[#00cc99] ${
+                  isActive("/contact") ? "text-[#00cc99] font-bold" : ""
+                }`}
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
 
-        <div className="flex basis-[48%] py-5 items-center justify-end gap-8 pr-[42px] space-x-4 text-white font-medium">
-          <Link href="/signin" className="font-bold text-white">
-            Sign In
-          </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-8 text-white font-medium mr-[0px]">
+            <Link href="/signin" className="font-bold text-white">
+              Sign In
+            </Link>
             <Link
               href="/signup"
               className="flex items-center bg-white text-black font-bold px-5 py-2.5 rounded-[10px] hover:bg-gray-100"
@@ -90,6 +88,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-[#f2f2f2] flex items-center justify-center shadow z-50 px-4 relative">
         <Link href="/" passHref>
           <div className="cursor-pointer z-20">
@@ -161,7 +160,7 @@ export default function Header() {
             <Link
               href="/signup"
               onClick={() => setIsOpen(false)}
-              className="inline-flex items-center gap-2 bg-white text-black rounded-md px-4 py-2 hover:bg-gray-100 transition text-sm"
+              className="inline-flex items-center gap-4 bg-white text-black rounded-md px-4 py-2 hover:bg-gray-100 transition text-sm"
             >
               <Image
                 src="/images/create.png"

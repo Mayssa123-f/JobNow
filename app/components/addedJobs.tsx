@@ -58,17 +58,20 @@ export default function RecentlyAddedJobs() {
 
         <div className="px-[15px]">
           <Swiper
-            spaceBetween={30}
+            spaceBetween={20}
             slidesPerView={1.2}
             breakpoints={{
-              480: { slidesPerView: 2 },
-              640: { slidesPerView: 1.5 },
-              1024: { slidesPerView: 2.5 },
+              480: { slidesPerView: 1.5, spaceBetween: 20 },
+              640: { slidesPerView: 2, spaceBetween: 25 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 2.5, spaceBetween: 30 },
+              1280: { slidesPerView: 3, spaceBetween: 30 },
             }}
           >
             {addedJobs.map((job, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col justify-between bg-white rounded-xl text-left w-full md:w-[450px] p-3 py-6">
+                <div className="flex flex-col justify-between bg-white rounded-xl text-left w-full max-w-[450px] p-3 py-6 mx-auto cursor-pointer shadow-md transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+                  {" "}
                   <img
                     src={job.image}
                     alt={`${job.company} logo`}

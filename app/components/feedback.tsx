@@ -50,7 +50,7 @@ export default function Feedback() {
 
   return (
     <section id="contact" className="py-14 md:py-20 bg-gray-50">
-      <div className="container mx-auto px-6 md:pb-30 pb-20 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-0 items-center">
+      <div className="container mx-auto px-4 md:pb-30 pb-20 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
         <div className="md:col-span-2 order-1 mt-8 md:mt-22 md:order-2">
           <div className="hidden md:block">
             <Swiper
@@ -123,10 +123,10 @@ export default function Feedback() {
 
           <div className="flex justify-center md:justify-start gap-4 md:gap-6">
             <button className="prev-btn w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-gray-300 text-gray-600 rounded-full transition-colors duration-300 hover:bg-[#00cc99] hover:text-white cursor-pointer">
-              <FaArrowLeft />
+              <FaArrowLeft className="text-white" />
             </button>
             <button className="next-btn w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-gray-300 text-gray-600 rounded-full transition-colors duration-300 hover:bg-[#00cc99] hover:text-white cursor-pointer">
-              <FaArrowRight />
+              <FaArrowRight className="text-white" />
             </button>
           </div>
         </div>
